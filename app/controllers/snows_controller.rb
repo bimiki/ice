@@ -25,8 +25,7 @@ class SnowsController < ApplicationController
 
     respond_to do |format|
       if @snow.save
-        format.html { redirect_to @snow, notice: "Snow was successfully created." }
-        format.json { render :show, status: :created, location: @snow }
+        format.html { redirect_to snows_url }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @snow.errors, status: :unprocessable_entity }

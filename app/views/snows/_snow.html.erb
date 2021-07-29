@@ -1,10 +1,19 @@
-<% @snows.each do |snow| %>
-<p class="card-body">
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="https://i.imgflip.com/34553k.jpg" alt="https://sayingimages.com/wp-content/uploads/frustrated-comment-memes.jpg">
-<div class="card-body">
-<p class="card-text"><%= snow.water %></p>
-<%= link_to 'Delete', snow, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
-</div>
-</div>
-<% end %>
+
+
+<ol class="list-group list-group">
+  <% @snows.each do |snow| %>
+          <li class="card-body">
+            <div class="card" style="width: 18rem;">
+
+            <img class="card-img-top" src="https://i.imgflip.com/34553k.jpg" alt="https://sayingimages.com/wp-content/uploads/frustrated-comment-memes.jpg">
+            <div class="card-body">
+            <div class="card-text"><b><%= snow.water %></div>
+            <button type="button" class="btn btn-outline-danger">
+                <%= link_to 'Delete', snow, method: :delete, data: { confirm: 'Are you sure?' }%>
+            </button>
+            </div>
+            </div>
+          </li>
+
+  <% end %>
+</ol>
