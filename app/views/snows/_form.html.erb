@@ -1,0 +1,23 @@
+<%= form_with(model: snow) do |form| %>
+  <% if snow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snow.errors.count, "error") %> prohibited this snow from being saved:</h2>
+
+      <ul>
+        <% snow.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://i.imgflip.com/34553k.jpg" alt="https://sayingimages.com/wp-content/uploads/frustrated-comment-memes.jpg">
+    <div class="card-body">
+      <h5 class="card-title">Water</h5>
+      <p class="card-text">
+        <%= form.text_field :water %></p>
+        <%= form.submit %>
+    </div>
+  </div>
+
+<% end %>
