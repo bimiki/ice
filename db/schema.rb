@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_031234) do
+ActiveRecord::Schema.define(version: 2021_08_01_124906) do
+
+  create_table "fires", force: :cascade do |t|
+    t.string "coal"
+    t.text "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "snows", force: :cascade do |t|
     t.string "water"
