@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<section id="page">
 <h1><br>Snow is comprised of this shit \/ \/ \/ </h1>
   <%= link_to 'New Snow', new_snow_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
       <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -19,3 +19,4 @@
     <ul class="list-group">
       <li class="container"><%= render 'fire/fire' %></li>
     </ul>
+</section>
