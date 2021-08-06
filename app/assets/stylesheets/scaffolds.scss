@@ -1,9 +1,15 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px; }
+  margin: 33px;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px) 1fr;)
+  grid-gap: 40px;
+}
 
 body {
+
   background-color: pink;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
